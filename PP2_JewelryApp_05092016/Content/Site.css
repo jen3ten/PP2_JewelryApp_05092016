@@ -1,0 +1,163 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Begin customized .CSS content ***********************************************/
+.header-float-right{
+    float: right;
+}
+
+.navbar{
+    background-color:lightblue;
+}
+
+.clothing-image{ /* sets the size of each thumbnail image on the View clothing pages */
+    /* padding:10px;
+    background-color:blue;*/
+    max-height:100%;
+    max-width:100%;
+    position:center;
+    padding:0px;
+    border:0px;
+    background-color:white;
+}
+
+.thumbnail {
+  display: inline-block;
+  display: block;
+  height: 100px;
+  width: 100px;
+  padding: 4px;
+  margin-top:10px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.index-container{   /* sets the size, display for each item in "view items" */
+    border-color:black;
+    border:solid;
+    margin:10px;
+    width:auto;
+    background-color:#4759c2;
+    padding:10px;
+    border-radius:10px;
+    color:white;
+    font-family: 'Overlock', cursive;
+    font-size:18px;
+
+}
+
+index-label-font{
+    /*font-family: 'Princess Sofia', cursive;*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+}
+
+index-text-font{
+    /*font-family: 'Overlock', cursive;*/
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:16px;
+}
+
+.delete-header{ /* sets the display parameters on delete view */
+    color:red;
+    font-weight:bold;
+}
+
+.btn-delete {
+  color: red;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+  margin:2px;
+}
+
+.btn-delete:hover{
+  color: #333333;
+  background-color: #fa5a5a;
+  border-color: #000000;
+}
+
+.btn-backtolist, .btn-details, .btn-createnew, .btn-edit {
+  color: blue;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+  margin:2px;
+}
+
+.btn-createnew{
+  color: grey;
+  font-weight:bold;
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+/* The following code found online search for "add icon to input submit button" */
+/* It is used to place the glyphicon on the "Save Changes" button */
+.icon-input-btn{
+    display: inline-block;
+    position: relative;
+}
+.icon-input-btn input[type="submit"]{
+    padding-left: 2em;
+}
+.icon-input-btn .glyphicon{
+    display: inline-block;
+    position: absolute;
+    left: 0.65em;
+    top: 30%;
+}
+
+/* Evans custom CSS begins here */
+.home-index-video{
+    padding: 25px;
+}
+
+body {
+    background-image:url('../Images/swirls on black.png');
+    background-size:cover;
+
+}
+
+a{
+    color:black;
+}
+
+card card-title{
+    font-size: 20px;
+}
+
+.view-format{
+    color:white;
+}
+
+.edit-format{
+    color:white;
+    font-size:24px;
+}

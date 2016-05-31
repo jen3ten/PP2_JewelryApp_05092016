@@ -1,0 +1,188 @@
+﻿@model IEnumerable<PP2_JewelryApp_05092016.Item>
+
+@{
+    ViewBag.Title = "View Item";
+}
+
+<h2>View Item</h2>
+
+<!--The Add button goes to the Add view and uses a glyphicon symbol -->
+<button class="btn btn-default btn-createnew">
+    <span class="glyphicon glyphicon-plus-sign"></span> @Html.ActionLink("Add Item", "Create")
+</button>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="@Html.DisplayFor(modelItem => item.Photo)">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">@Html.DisplayFor(modelItem => item.Name)<i class="material-icons right">more_vert</i></span>
+                    @*<p><a href="#">This is a link</a></p>*@
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">@Html.DisplayFor(modelItem => item.Name)<br />
+                    <i class="material-icons right">close</i></span>
+                    <p>
+                        @Html.DisplayFor(modelItem => item.Collection.Name)<br />
+                        @Html.DisplayFor(modelItem => item.Type)<br />
+                        @Html.DisplayFor(modelItem => item.StyleNum)<br />
+                        @Html.DisplayFor(modelItem => item.Cost)<br />
+                        @Html.DisplayFor(modelItem => item.Description)<br />
+                        @Html.DisplayFor(modelItem => item.Notes)<br />
+                        @Html.DisplayFor(modelItem => item.Retired)<br />
+                    </p>
+                @*
+                    <p>and lots of other stuff</p>
+                    <p><a href="~/First/#">This is a link, go to first page</a></p>*@
+                    <span class="glyphicon glyphicon-pencil"></span> @Html.ActionLink("Edit Item", "Edit", new { id = item.ItemID })
+
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+    @* Replaced with Modernizer thumbnail code
+            <div class="container">
+            @foreach (var item in Model)
+            {
+                <div class="container index-container">
+                    <!-- A large container holds all item info -->
+
+                    <div class="col-md-2">
+                        <!-- First column holds the thumbnail photo -->
+                        <div class="thumbnail">
+                            <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="@Html.DisplayFor(modelItem => item.Name)" class="img-thumbnail clothing-image">
+                            <br />
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 index-label-font">
+                        <!-- Second column holds the labels -->
+                        <p class="right-justify">
+                            Name: <br />
+                            Collection: <br />
+                            Type: <br />
+                            Style: <br />
+                            Cost: <br />
+                            Description: <br />
+                            Notes: <br />
+                            Retired: <br />
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 index-text-font">
+                        <!-- Third column holds the item properties -->
+                        <p>
+                            @Html.DisplayFor(modelItem => item.Name)<br />
+                            @Html.DisplayFor(modelItem => item.Collection.Name)<br />
+                            @Html.DisplayFor(modelItem => item.Type)<br />
+                            @Html.DisplayFor(modelItem => item.StyleNum)<br />
+                            @Html.DisplayFor(modelItem => item.Cost)<br />
+                            @Html.DisplayFor(modelItem => item.Description)<br />
+                            @Html.DisplayFor(modelItem => item.Notes)<br />
+                            @Html.DisplayFor(modelItem => item.Retired)<br />
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <!-- Fourth column holds the buttons -->
+                        <button class="btn btn-default btn-edit">
+                            <span class="glyphicon glyphicon-pencil"></span> @Html.ActionLink("Edit Item", "Edit", new { id = item.ItemID })
+                        </button> | <button class="btn btn-default btn-details">
+                            <span class="glyphicon glyphicon-info-sign"></span>
+                            @Html.ActionLink("View Item Details", "Details", new { id = item.ItemID })
+                        </button> | <button class="btn btn-default btn-delete">
+                            <span class="glyphicon glyphicon-remove-sign"></span>
+                            @Html.ActionLink("Delete Item", "Delete", new { id = item.ItemID })
+                        </button>
+                    </div>
+
+                </div>
+            }
+        </div>*@
+
+
+    @* Original code replaced with thumbnails
+            <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Photo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StyleNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Notes)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Retired)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Own)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Collection.Name)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Photo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StyleNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Retired)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Own)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Collection.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ItemID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ItemID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ItemID })
+                </td>
+            </tr>
+        }
+
+        </table>*@
